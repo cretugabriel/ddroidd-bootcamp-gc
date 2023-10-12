@@ -7,3 +7,6 @@ Regardless, I have started it today and I believe I managed to complete around 8
 
 Tiny CSS changes and some JS validation remanined to be done, to be fully 100%.
 Anyways, I would very much like to make sure at least I have submitted everything that I've worked for the past hours in the time given.
+
+Kind regards,
+Gabriel Cretu
