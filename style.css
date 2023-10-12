@@ -1,0 +1,127 @@
+@import './styles/base.css';
+
+/*** Please replace the example styling rules below with your own styling rules ***/
+body {
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: var(--athens-gray);
+  margin: 0 20%;
+  height: 75%;
+}
+
+.container img{
+  width: 60%;
+  height: auto;
+}
+
+.container button{
+  align-items: center;
+  text-align: center;
+}
+
+/* .container h1 { font-weight: var(--font-weight-regular); } */
+
+.header{
+  margin: 0;
+  border: 0;
+  padding: 0 2% 0 2%;
+  background-color: var(--prussian-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title{
+color: var(--white);
+font-weight: var(--font-weight-light);
+font-family: var(--font-family-light);
+font-family: "OpenSans", sans-serif;
+}
+
+.join-us-button{
+  background-color: var(--school-bus-yellow);
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 2px;
+  font-size: 16px;
+  border-radius: 25px;
+  width: 350px;
+  cursor: pointer;
+}
+
+.join-us-button-form{
+  background-color: var(--school-bus-yellow);
+  float: right;
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 2px;
+  font-size: 16px;
+  border-radius: 25px;
+  width: 350px;
+  cursor: pointer;
+}
+
+.footer{
+  background-color: var(--dove-gray);
+  text-align: center;
+  padding: 20px 0;
+  border: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+#application-form {
+  width: 80%;
+  margin: 0 auto;
+  color: var(--prussian-blue);
+}
+
+fieldset {
+  margin-bottom: 20px;
+  border: none;
+}
+
+legend, h1{
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-bold);
+  font-family: "OpenSans", sans-serif;
+}
+
+#applicationf-rom .title-form{
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  flex: 1;
+  margin-right: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid var(--prussian-blue);
+  color: var(--prussian-blue);
+}

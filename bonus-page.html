@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Autumn-Winter Bootcamp 2023 Web Challenge</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-logo">
+        <a href="./index.html"><img src="./public/assets/img/ddroidd_logo.svg"></a>
+      </div>
+      <div class="header-title">
+        <h1 class = "title">Autumn - Winter Bootcamp</h1>
+      </div>
+      <div class="header-button">
+      </div>
+    </div>
+    <div class="container">
+        <h1 class="title-form">Excellent!<br> See you in November 2023!<br><br> Bonus Page</h1>
+        <p>First Name: <span id = "first-name"></span></p>
+        <p>Last Name: <span id = "last-name"></span></p>
+        <p>Phone Number: <span id = "phoneNo"></span></p>
+        <p>Email: <span id = "email"></span></p>
+        <p>Address line 1: <span id = "address1"></span></p>
+        <p>Address line 2: <span id = "address2"></span></p>
+        <p>Country: <span id = "country"></span></p>
+        <p>State: <span id = "state"></span></p>
+        <p>City: <span id = "city"></span></p>
+    </div>
+    <div class="footer">
+      <h1 class="title">Come to the dark side... we have 🍪</h1>
+    </div>
+    <!-- <script type="module" src="/main.js"></script> -->
+    <script src="./main.js"></script>
+    <script>
+      const firstName = localStorage.getItem('first-name');
+      const lastName = localStorage.getItem('last-name');
+      const phoneNumber = localStorage.getItem('phoneNo');
+      const email = localStorage.getItem('email');
+      const addressOne = localStorage.getItem('address1');
+      const addressTwo = localStorage.getItem('address2');
+      const country = localStorage.getItem('country');
+      const state = localStorage.getItem('state');
+      const city = localStorage.getItem('city');
+
+      document.getElementById('first-name').textContent = firstName;
+      document.getElementById('last-name').textContent = lastName;
+      document.getElementById('phoneNo').textContent = phoneNumber;
+      document.getElementById('email').textContent = email;
+      document.getElementById('address1').textContent = addressOne;
+      document.getElementById('address2').textContent = addressTwo;
+      document.getElementById('country').textContent = country;
+      document.getElementById('state').textContent = state;
+      document.getElementById('city').textContent = city;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Autumn-Winter Bootcamp 2023 Web Challenge</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-logo">
+        <a href="./index.html"><img src="./public/assets/img/ddroidd_logo.svg"></a>
+      </div>
+      <div class="header-title">
+        <h1 class = "title">Autumn - Winter Bootcamp</h1>
+      </div>
+      <div class="header-button">
+        <a href ="./form-submission.html"><button class="join-us-button">Join Us</button></a>
+      </div>
+    </div>
+    <div class="container">
+        <div id="application-form">
+            <h1 class="title-form">Application form</h1>
+            <form id="myForm" method="GET" onsubmit="validateForm()">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="fname">First Name <span class="required">*</span></label>
+                            <input required type="text" id="first-name" name="first-name" placeholder="First name">
+                            
+                        </div>
+                        <div class="input-group">
+                            <label for="lname">Last Name <span class="required">*</span></label>
+                            <input required type="text" id="last-name" name="last-name" placeholder="Last name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="phoneNo">Phone Number <span class="required">*</span></label>
+                            <input required type="tel" id="phoneNo" name="phoneNo" placeholder="+40 711 111 111"
+                                pattern="+[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{3}">
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email address <span class="required">*</span></label>
+                            <input required type="email" id="email" name="email" placeholder="john@doe.com">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Address</legend>
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="addressLine1">Address Line 1 <span class="required">*</span></label>
+                            <input required type="text" id="addressLine1" name="addressLine1" placeholder="Street name & number">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="addressLine2">Address Line 2</label>
+                            <input type="text" id="addressLine2" name="addressLine2" placeholder="Suite, apartment">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="country">Country <span class="required">*</span></label>
+                            <select required id="country" name="country" placeholder="Country">
+                                <option disabled>Country</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="state">State</label>
+                            <select required id="state" name="state" placeholder="State">
+                                <option disabled>State</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="city">City <span class="required">*</span></label>
+                            <select required id="city" name="city" placeholder="City">
+                                <option disabled>City</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class = "error-handling">
+                    <p id = "errorMessagePhoneNumber"><span class = "errorMessagePhoneNumber"></span></p>
+                </div>
+                <a href="./form-submission.html"><button type = "submit" class="join-us-button-form">Join Us</button></a>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+      <h1 class="title">Come to the dark side... we have 🍪</h1>
+    </div>
+    <!-- <script type="module" src="/main.js"></script> -->
+    <script src="./main.js"></script>
+    <script>
+        const form = document.getElementById('myForm');
+        const fname = document.getElementById('first-name');
+        const lname = document.getElementById('last-name');
+        const phoneNo = document.getElementById('phoneNo');
+        const email = document.getElementById('email');
+        const addr1 = document.getElementById('addressLine1');
+        const addr2 = document.getElementById('addressLine2');
+        const country = document.getElementById('country');
+        const state = document.getElementById('state');
+        const city = document.getElementById('city');
+    
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            
+
+            const formValue = form.value;
+            const firstNameValue = fname.value;
+            const lastNameValue = lname.value;
+            const phoneNumberValue = phoneNo.value;
+            const emailValue = email.value;
+            const addressLine1Value = addr1.value;
+            const addressLine2Value = addr2.value;
+            const countryValue = country.value;
+            const stateValue = state.value;
+            const cityValue = city.value;
+            
+            localStorage.setItem('first-name', firstNameValue);
+            localStorage.setItem('last-name', lastNameValue);
+            localStorage.setItem('phoneNo', phoneNumberValue);
+            localStorage.setItem('email', emailValue);
+            localStorage.setItem('address1', addressLine1Value);
+            localStorage.setItem('address2', addressLine2Value);
+            localStorage.setItem('country', countryValue);
+            localStorage.setItem('state', stateValue);
+            localStorage.setItem('city', cityValue);
+    
+            window.location.href="./form-submission.html";
+        })
+    </script>
+  </body>
+</html>
